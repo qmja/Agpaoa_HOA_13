@@ -1,0 +1,11 @@
+ 
+  - name: Installing NTP
+    apt:
+      name: chrony
+      state: latest
+
+  - name: Starting/Restarting chrony.service
+    service:
+      name: chrony.service
+      enabled: true
+      state: restarted
